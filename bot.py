@@ -6,12 +6,13 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+import os 
 
-BOT_TOKEN = "8244806173:AAHZiM-yO9CAl45-Cmvix0bEGoP80TnJ54"
+BOT_TOKEN = "8244806173:AAHZiM-yO9CAl45-Cmvix0bEGoP80TnJ54"  
 CHANNEL_ID = -1708258221
 
+bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.MARKDOWN))
 logging.basicConfig(level=logging.INFO)
-bot = Bot(token=8244806173:AAHZiM-y09CAl45-Cmvix0bOEGoP80TnJ54, default=DefaultBotProperties(parse_mode=ParseMode.MARKDOWN))
 dp = Dispatcher()
 
 @dp.message(CommandStart())
